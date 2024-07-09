@@ -1,5 +1,5 @@
 body {
-    background-color: #E6E6FA; /* Lila */
+    background-color: #c0eef4fa; /* Lila */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
 }
 
 header, footer {
-    background-color: #8A2BE2; /* Violeta */
+    background-color: #2b49e2d6; /* Violeta */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -25,24 +25,49 @@ main {
     flex: 1;
 }
 
+/* Estilos adicionales para ajustar el tamaño y la separación */
 .product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: white;
-    text-align: center; /* Centrar el contenido del producto */
-}
-
-.product h2 {
-    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo del contenedor del producto */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto; /* Centrar el contenedor del producto */
 }
 
 .product img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 300px; /* Tamaño máximo para las imágenes */
     display: block;
-    margin: 0 auto 10px auto; /* Centrar la imagen */
+    margin: 0 auto 10px;
 }
+
+.product h2, .product p, .product button {
+    font-size: 1rem;
+}
+
+.product h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 5px;
+}
+
+.product button {
+    margin-top: 10px;
+    align-self: center;
+}
+
+
+
 
 .agregar-carrito {
     background-color: #FF69B4; /* Rosa */
@@ -131,15 +156,34 @@ main {
     background-color: #FF1493; /* Rosa más oscuro */
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('img/banner.jpg');
-    background-size: cover;
-    background-position: center;
+.container{
+    margin-top: 20px;
+}
+
+.history {
+    margin-bottom: 30px; /* Espacio inferior entre secciones de historia */
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo ligero para mejor legibilidad del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 main {
     flex: 1;
+}
+
+.Contacto,h2{
+    text-align: center;
+    text-shadow: 2px 2px 3px gray;
+    font-size: 3rem;
+}
+
+.btn-primary{
+    font-size: 1.25rem; /* Tamaño de fuente más grande */
+    padding: 0.75rem 1.5rem; /* Más espacio alrededor del texto */
+}
+
+.btn-secondary {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
 }
