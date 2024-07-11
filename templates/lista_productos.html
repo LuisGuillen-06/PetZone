@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div class="container mt-4">
+        <h3 class="mb-5">Lista de Productos</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <form action="{{ url_for('buscar_productos') }}" method="GET" class="input-group">
+                    <input type="text" class="form-control me-2" name="q" placeholder="Buscar por nombre o descripción">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8 d-flex justify-content-between">
+                <a href="{{ url_for('lista_productos') }}" class="btn btn-outline-secondary btn-md mb-3 ml-2">Mostrar todos</a>
+                <a href="/nuevo_producto" class="btn btn-outline-primary btn-md mb-3">Nuevo Producto</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in productos %}
+                    <tr>
+                        <td>{{ producto[1] }}</td>
+                        <td>{{ producto[2] }}</td>
+                        <td>${{ producto[3] }}</td>
+                        <td>{{ producto[4]}}</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <a href="/editar_producto/{{ producto[0] }}" class="btn btn-warning btn-sm">Editar</a>
+                                <button class="btn btn-danger btn-sm" onclick="confirmarEliminar({{ producto[0] }}, '{{ producto[1] | replace("'", "\\'") }}')">Eliminar</button>
+                                <!--<a href="/eliminar_producto/{{ producto[0] }}" class="btn btn-danger btn-sm">Eliminar</a>-->
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

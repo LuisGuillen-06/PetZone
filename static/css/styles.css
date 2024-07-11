@@ -1,5 +1,5 @@
-body {
-    background-color: #c0eef4fa; /* Lila */
+body,html {
+    background-color: #f5fffe; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,15 +8,15 @@ body {
     min-height: 100vh;
 }
 
-header, footer {
-    background-color: #2b49e2d6; /* Violeta */
+header{
+    background-color:#007bff !important;
     color: white;
     text-align: center;
     padding: 10px 0;
     
 }
 
-header h1, footer p {
+header h1{
     margin: 0;
 }
 
@@ -73,7 +73,7 @@ main {
     background-color: #FF69B4; /* Rosa */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
@@ -83,7 +83,7 @@ main {
 
 .agregar-carrito:hover {
     background-color: #FF1493; /* Rosa más oscuro */
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 #carrito {
@@ -160,6 +160,22 @@ main {
     margin-top: 20px;
 }
 
+.footer-custom.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1030;
+     /* Ensure the footer has a background color */
+    padding: 5px 0;
+}
+.content {
+    min-height: calc(100vh - 100px)
+}
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
 .history {
     margin-bottom: 30px; /* Espacio inferior entre secciones de historia */
     padding: 20px;
@@ -172,18 +188,29 @@ main {
     flex: 1;
 }
 
-.Contacto,h2{
+.Contacto{
     text-align: center;
     text-shadow: 2px 2px 3px gray;
     font-size: 3rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
-.btn-primary{
-    font-size: 1.25rem; /* Tamaño de fuente más grande */
-    padding: 0.75rem 1.5rem; /* Más espacio alrededor del texto */
+.social-icon {
+    color: #ffffff; /* Color blanco para los íconos */
+    padding: 1px; /* Espaciado interno */
+    margin-right: 2px; /* Margen derecho entre íconos */
+    border-radius: 50%; /* Bordes redondeados */
+}
+.social-icon:hover {
+    color: #ffffff; /* Color blanco al pasar el mouse */
 }
 
-.btn-secondary {
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
+
+.alert-message {
+    position: fixed;
+    top: 70px; /* Ajusta según la ubicación deseada */
+    right: 20px;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }

@@ -1,12 +1,18 @@
 .navbar-custom {
-    background-color: #007bff;
+    background-color: #007bff !important;
 }
 .footer-custom {
-    background-color: #007bff;
+    background-color: #007bff !important;
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
+}
+.navbar-custom .nav-link:hover {
+    color: #dcdcdc; /* Color al pasar el ratón */
 }
 
+.container {
+    margin-top: 80px; /* Ajusta este valor según la altura del navbar */
+}
 /* Estilo para aplicar una imagen de fondo en la jumbotron */
 .jumbotron {
     background-image: url('../img/rentable-tienda-animales.jpg'); /* Ruta relativa a la carpeta 'static' */
@@ -40,7 +46,11 @@
 
 h3 {
     text-shadow: 3px 3px 3px rgba(14, 2, 2, 0.975);
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+h4 {
+    text-shadow: 3px 3px 3px rgba(14, 2, 2, 0.975);
 }
 
 .iframe-container {
@@ -61,3 +71,59 @@ h3 {
 .textp{
     text-align: justify;
 }
+
+.nav-item{
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-section {
+    border: 1px solid #8f969e; /* Color y grosor del borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Espaciado externo */
+    background-color: #f8f9fa; /* Fondo ligero para mejor legibilidad */
+}
+
+.proD {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 3px rgba(7, 105, 181, 0.975);
+}
+
+.product {
+    width: 100%;
+}
+
+.product-image-wrapper {
+    width: 100%;
+    max-height: 300px; /* Adjust this value based on your design */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-title {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    
+}
+
+.product-description {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.product-price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
